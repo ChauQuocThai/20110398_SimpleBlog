@@ -1,0 +1,8 @@
+<h2>Sửa bài viết</h2>
+<form action="/edit/{{post.id}}" method="POST">
+    <label for="title">Tiêu đề:</label>
+    <input type="text" id="title" name="title" value="{{post.title}}" required>
+    <label for="content">Nội dung:</label>
+    <textarea id="content" name="content" required>{{post.content}}</textarea>
+    <button type="submit">Lưu</button>
+</form>

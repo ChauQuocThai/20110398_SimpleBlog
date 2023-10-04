@@ -1,0 +1,18 @@
+<h2>Danh sách các bài viết</h2>
+<ul>
+    {{#each posts}}
+    <li>
+        <a href="/post/{{this.id}}">{{this.title}}</a>
+        <button onclick="window.location.href='/edit/{{this.id}}'">Sửa</button>
+        <button onclick="deletePost('{{this.id}}')">Xóa</button>
+    </li>
+    {{/each}}
+</ul>
+
+<script>
+    function deletePost(postId) {
+        if (confirm('Bạn có chắc muốn xóa bài viết này không?')) {
+            window.location.href = '/delete/' + postId;
+        }
+    }
+</script>
